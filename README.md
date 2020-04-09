@@ -6,7 +6,7 @@ In the data area, there is an abundance of customer information and tools availa
 
 #### Data
 
-The dataset is available on Kaggle: E-Commerce Data
+The dataset is available on Kaggle: [E-Commerce Data](https://www.kaggle.com/carrie1/ecommerce-data)
 
 The dataframe is composed of 541,909 rows and 8 features
 
