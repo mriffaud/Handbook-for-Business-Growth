@@ -5,6 +5,7 @@
 In the data area, there is an abundance of customer information and tools available to businesses in order to make informed business decision. In this handbook I followed a method to use customer data to grow a business using a combination of programming, data analysis, and machine learning.
 
 #### Data
+This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
 
 The dataset is available on Kaggle: [E-Commerce Data](https://www.kaggle.com/carrie1/ecommerce-data)
 
@@ -23,3 +24,9 @@ The dataframe is composed of 541,909 rows and 8 features
 
 ## Step 1 - Know Your Metrics
 
+The first step is to understand the main metrics the business wants to track, depending on the company’s product, position, targets & more. Most businesses already track their key performance indicators (KPIs) already. In this example, the main KPIs can be revenue related, such as the revenue, the average order value, the order frequency...
+
+
+
+
+However for the purpose of this analysis, we are going to produced a data analysis 
