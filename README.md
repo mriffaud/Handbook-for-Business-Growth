@@ -8,6 +8,7 @@ In the data area, there is an abundance of customer information and tools availa
 1. [ Data ](#data)
 2. [ Step 1 - Key Performance Indicators ](#step1)
 
+
 <a name="data"></a>
 ## Data
 This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
@@ -27,9 +28,12 @@ The dataframe is composed of 541,909 rows and 8 features
 * CustomerID: the unique customer ID
 * Country: the country from which the order has been placed
 
+
 <a name="step1"></a>
 ## Step 1 - Key Performance Indicators
 
 The first step is to understand the main metrics the business wants to track, depending on the company’s product, position, targets & more. Most businesses already track their key performance indicators (KPIs) already. In this example, the main KPIs can be revenue related, such as the revenue, the average order value, the order frequency...
 
+### Revenue by Country
 
+United Kingdom is the region that generates most of the company's revenue. For the purpose of this analysis, we will focus on UK customers.
