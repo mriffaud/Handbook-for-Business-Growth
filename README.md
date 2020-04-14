@@ -36,4 +36,23 @@ The first step is to understand the main metrics the business wants to track, de
 
 ### Revenue by Country
 
+![revenue by country](https://raw.githubusercontent.com/mriffaud/Handbook-of-the-Business-Growth/master/images/Revenue%20by%20Country.png?token=AKRWJIAHWZZMB6A7RC6RHOS6SXMQG)
+
 United Kingdom is the region that generates most of the company's revenue. For the purpose of this analysis, we will focus on UK customers.
+
+### Monthly Revenue
+
+![Monthly Revenue]()
+
+The chart above shows upward trend for the revenue generated up to the November 2011 (as the December data is incomplete). Up to August 2011, the business had a monthly revenue between 400K and 600K, since then, the business has seen its revenue dramatically increase reaching 1.2M in November 2011.
+
+![Montly Growth Rate]()
+
+September was an outstanding months with almost 60% growth compared with the previous month. November was also very good month with 46.2% growth. March and May are both up by more than 30% but this may be explain by the poor performance of the previous months.
+
+January and April 2011 are poor performance months. We will have to investigate the data to understand why.
+
+### Monthly Active Customers
+
+
+
