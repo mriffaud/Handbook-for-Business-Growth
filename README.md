@@ -7,6 +7,7 @@ In the data area, there is an abundance of customer information and tools availa
 ## Table of Content
 1. [ Data ](#data)
 2. [ Step 1 - Key Performance Indicators ](#step1)
+3. [ Step 2 - Customer Segmentation ](#step2)
 
 
 <a name="data"></a>
@@ -104,4 +105,8 @@ A cohort retention analysis help understand how many customers return after a de
 ![Customers Cohorts Retention](https://raw.githubusercontent.com/mriffaud/Handbook-of-the-Business-Growth/master/images/KPIs/Customers%20Cohorts%20Retention.png?token=AKRWJIBQTFYYMZBYJ6PNVQS6SXTH4)
 
 Ove the year the company retained 27% of its customers.
+
+<a name="step2"></a>
+## Step 2 - Customer Segmentation
+
 
