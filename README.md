@@ -36,17 +36,17 @@ The first step is to understand the main metrics the business wants to track, de
 
 ### Revenue by Country
 
-![revenue by country](https://raw.githubusercontent.com/mriffaud/Handbook-of-the-Business-Growth/master/images/RevenuebyCountry.png?token=AKRWJIDVKWO5Z4K4RIWI2UC6SXOVK)
+![revenue by country]()
 
 United Kingdom is the region that generates most of the company's revenue. For the purpose of this analysis, we will focus on UK customers.
 
 ### Monthly Revenue
 
-![Monthly Revenue](https://raw.githubusercontent.com/mriffaud/Handbook-of-the-Business-Growth/master/images/MonthlyRevenue.png?token=AKRWJICHVPTIXHP2H6TQFRK6SXOZI)
+![Monthly Revenue]()
 
 The chart above shows upward trend for the revenue generated up to the November 2011 (as the December data is incomplete). Up to August 2011, the business had a monthly revenue between 400K and 600K, since then, the business has seen its revenue dramatically increase reaching 1.2M in November 2011.
 
-![Montly Growth Rate](https://raw.githubusercontent.com/mriffaud/Handbook-of-the-Business-Growth/master/images/MontlyGrowthRate.png?token=AKRWJIEHNN65TNUORDOV7HC6SXO3W)
+![Montly Growth Rate]()
 
 September was an outstanding months with almost 60% growth compared with the previous month. November was also very good month with 46.2% growth. March and May are both up by more than 30% but this may be explain by the poor performance of the previous months.
 
@@ -54,5 +54,54 @@ January and April 2011 are poor performance months. We will have to investigate 
 
 ### Monthly Active Customers
 
+![Monthly Active Customers]()
+![Montly Active Customers Rate]()
 
+In January the company lost almost 200 customers, going from 871 in December to 684 in January which represents -21.47% decrease. Similarly, in April the business went from 923 customer to 817 which represents a decrease of 11.48%.
+
+### Monthly Order Count
+
+![Monthly Orders]()
+![Monthly Orders Rate]()
+
+The number of orders has been decreasing between December and February going from 1,885 to 1,259 orders representing -33.21% decrease. The orders went up until May growing by 56.71%. The orders dropped again until August by -27.72% and finally took up to November by 50.34%.
+
+### Average Order Value
+
+![Monthly AOV]()
+![Montly AOV Rate]()
+
+Between December and April the company's AVG lost 24.05%, it went back up until September going from £272.66 in April to £412.45 in September which represents an increase of 51.27%. the month of October registered a decrease (-9.89) to go back to almost the AVG as September's one in November (£412.08 which represents 10.88% increase compared with October's AVG.
+
+### New Customer Ratio
+
+A new customer is a customers that purchased for the first time within a period of time defined by the business. For the purpose of this analysis, a new customer is the first time a customerID appears in the dataset, this means that all the customers for December 2010 will be classed as new customers.
+
+![Monthly New Customer Ratio]()
+
+As expected the new customer ratio declines over the year as we assumed that all the customers in December 2010 were new ones. (we assumed on Feb, all customers were New). For the last six months of the year, the new customer ratio is of about 20%.
+
+### New Customer vs Existing Customer Revenue
+
+![New Customer vs Existing Customer Revenue]()
+
+We can see on the chart above that the new customers' revenue decreases as time goes on, this may be because we only have a year worth of data. However the existing customer shows a positive trend which suggests that the business retains most of its customers.
+
+### Retention Rate
+
+Retention rate the percentage of customers a business has retained over a given time period. It is a very important KPI and should be monitored very closely because it indicates how good of a job the marketing and sales teams are doing. It is also cost effective to focus on keeping the retention rate up because it requires more time, money and effort to convince and convert someone new to make a purchase or sign up for a services rather than keeping your existing customers that already know the business.
+
+Fot the purpose of this analysis, we are going to calculate the monthly retention rate.
+
+![Monthly Retention Rate]()
+
+Overall the retention rate is good with the highest rate at 47% in January and the lowest at 33% in February. The three best months in term of customer retention are January, June and August. Over the 11 months, the rentention rate is 42%.
+
+### Retentention by Cohort
+
+A cohort retention analysis help understand how many customers return after a defined period of time.
+
+![Customers Cohorts Retention]()
+
+Ove the year the company retained 27% of its customers.
 
