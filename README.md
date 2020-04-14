@@ -42,7 +42,7 @@ United Kingdom is the region that generates most of the company's revenue. For t
 
 ### Monthly Revenue
 
-![Monthly Revenue]()
+![Monthly Revenue](https://github.com/mriffaud/Handbook-of-the-Business-Growth/tree/master/images/Revenue-by-Country.png)
 
 The chart above shows upward trend for the revenue generated up to the November 2011 (as the December data is incomplete). Up to August 2011, the business had a monthly revenue between 400K and 600K, since then, the business has seen its revenue dramatically increase reaching 1.2M in November 2011.
 
