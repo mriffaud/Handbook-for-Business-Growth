@@ -26,7 +26,7 @@ The dataframe is composed of 541,909 rows and 8 features
 
 The first step is to understand the main metrics the business wants to track, depending on the company’s product, position, targets & more. Most businesses already track their key performance indicators (KPIs) already. In this example, the main KPIs can be revenue related, such as the revenue, the average order value, the order frequency...
 
-1. [ Description. ](#desc)
+1. [ Description. ]
 2. [ Usage tips. ](#usage)
 
 <a name="desc"></a>
