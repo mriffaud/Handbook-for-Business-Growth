@@ -6,7 +6,7 @@ In the data area, there is an abundance of customer information and tools availa
 
 ## Table of Content
 1. [ Data ](#data)
-2. [ Step 1 - Key Performance Indicator ](#step1)
+2. [ Step 1 - Key Performance Indicators ](#step1)
 
 <a name="data"></a>
 ## Data
@@ -28,7 +28,7 @@ The dataframe is composed of 541,909 rows and 8 features
 * Country: the country from which the order has been placed
 
 <a name="step1"></a>
-## Step 1 - Key Performance Indicator
+## Step 1 - Key Performance Indicators
 
 The first step is to understand the main metrics the business wants to track, depending on the company’s product, position, targets & more. Most businesses already track their key performance indicators (KPIs) already. In this example, the main KPIs can be revenue related, such as the revenue, the average order value, the order frequency...
 
