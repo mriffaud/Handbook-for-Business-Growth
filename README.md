@@ -18,6 +18,8 @@ The dataset is available on Kaggle: [E-Commerce Data](https://www.kaggle.com/car
 
 The dataframe is composed of 541,909 rows and 8 features
 
+![data](https://github.com/mriffaud/Handbook-of-the-Business-Growth/blob/master/data/data.png)
+
 #### Data Dictionary
 
 * InvoiceNo: the invoice number
