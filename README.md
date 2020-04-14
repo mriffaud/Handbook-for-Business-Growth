@@ -111,4 +111,14 @@ Ove the year the company retained 27% of its customers.
 <a name="step2"></a>
 ## Step 2 - Customer Segmentation
 
+With the most important metrics tracked and monitored, we can now focus on segmenting the customers. Customer segmentation is the process of grouping customers with common characteristics into homogenous groups. This allows businesses to target consumers with specific needs, use its resources more effectively and make better strategic marketing decisions.
+
+For the purpose of this analysis, we are using the RFM (Recency - Frequency - Monetary) method to segment the customers into groups on their business value:
+* Low Value: Customers who are less active than others, not very frequent buyer/visitor and generates very low maybe negative revenue.
+* Mid Value: In the middle of everything. Often using our platform (but not as much as our High Values), fairly frequent and generates moderate revenue.
+* High Value: The group we don’t want to lose. High Revenue, Frequency and low Inactivity.
+
+### Calculate Recency
+
+The recency shows how recently a customer has made a purchase. Thus, we need to extract the last invoice date for each customer and then calculate the number of day they have been inactive.
 
