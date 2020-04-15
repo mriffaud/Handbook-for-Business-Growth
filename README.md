@@ -4,12 +4,13 @@
 
 In the data area, there is an abundance of customer information and tools available to businesses in order to make informed business decision. In this handbook I followed a method to use customer data to grow a business using a combination of programming, data analysis, and machine learning.
 
+---
 ## Table of Content
 1. [ Data ](#data)
 2. [ Step 1 - Key Performance Indicators ](#step1)
 3. [ Step 2 - Customer Segmentation ](#step2)
 
-
+---
 <a name="data"></a>
 ## Data
 This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
@@ -31,7 +32,7 @@ The dataframe is composed of 541,909 rows and 8 features
 * CustomerID: the unique customer ID
 * Country: the country from which the order has been placed
 
-
+---
 <a name="step1"></a>
 ## Step 1 - Key Performance Indicators
 
@@ -108,6 +109,7 @@ A cohort retention analysis help understand how many customers return after a de
 
 Ove the year the company retained 27% of its customers.
 
+---
 <a name="step2"></a>
 ## Step 2 - Customer Segmentation
 
