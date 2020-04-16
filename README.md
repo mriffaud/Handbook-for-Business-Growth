@@ -176,10 +176,10 @@ Now that we have the scores for recency, frequency and revenue, we can calculate
 
 ![OverallScore](https://github.com/mriffaud/Handbook-of-the-Business-Growth/blob/master/images/RFM%20Segmentation/OverallScore.png)
 
-The table above shows that the customers in OverallScore 1 are more valuable than customers in OverallScore 5. In order to keep in line with the business requirements laid out earlier in Step 2, we are going to classify the scores as follow:
-* 0 to 1: Low Value
-* 2 to 3: Mid Value
-* 4+: High Value
+The table above shows that the customers in OverallScore 4 are more valuable than customers in OverallScore 0. In order to keep in line with the business requirements laid out at the biginning of *Step 2 - Customer Segmentation*, we are going to classify the scores as follow:
+* 0 : Low Value
+* 1 and 2: Mid Value
+* 3 and 4: High Value
 
 ![3d plot](https://github.com/mriffaud/Handbook-of-the-Business-Growth/blob/master/images/RFM%20Segmentation/3d%20plot.png)
 
