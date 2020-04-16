@@ -152,7 +152,7 @@ The optimal number of frequency cluster is 4.
 
 ![Frequency clusters]()
 
-The table above shows that customers in Cluster 2 have on average 3 orders while cluster 1 and 0 have 22 and 116 orders respectively. Cluster 0 has a higher frequency meaning that they pass more orders and therefore are better customers compared with cluster 1 and 2.
+The table above shows that customers in Cluster 0 pass on average 3 orders while cluster 1, 2 and 3 have 14, 45 and 151 orders respectively. Cluster 3 has a higher order frequency meaning that customers pass more orders and therefore are better value compared with the other clusters.
 
 ### Calculate Revenue
 
@@ -164,11 +164,11 @@ The histogram shows some customers generating negative revenue, this is because 
 
 ![Revenue Inertia Graph]()
 
-looking at the graph above, are going to take 3 clusters.
+Looking at the graph above, are going to take 3 clusters.
 
 ![revenue_clusters]()
 
-Cluster 2 has negative revenue up to £3.75 while cluster 1 median revenue is £48.64 and the cluster 0 median is £651.29. Therefore cluster 2 has the less valuable customers.
+The table above shows that cluster 0 generate less revenue than the other clusters, 2 being the most revenue generating cluster.
 
 ### RFM Segmentation
 
@@ -176,6 +176,15 @@ Now that we have the scores for recency, frequency and revenue, we can calculate
 
 ![OverallScore]()
 
-The table above shows that the customers in OverallScore 6 are more valuable than customers in OverallScore 0. In order to keep in line with the business requirements laid out earlier in Step 2.
+The table above shows that the customers in OverallScore 1 are more valuable than customers in OverallScore 5. In order to keep in line with the business requirements laid out earlier in Step 2, we are going to classify the scores as follow:
+* 0 to 1: Low Value
+* 2 to 3: Mid Value
+* 4+: High Value
 
+![3d plot]()
+
+With this simple RFM segmentation, we can support marketing to make informative strategic decisions. In this instance:
+* High Value: improve Retention and Frequency
+* Mid Value: improve Retention and Frequency
+* Low Value: increase Frequency
 
