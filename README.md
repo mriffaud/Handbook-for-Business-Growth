@@ -237,11 +237,6 @@ To build the predictive model we used XGBoost library to do the classification.
 
 ![xgb_model](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Customer%20Lifetime%20Value/xgb_model.png)
 
-Accuracy shows 76% accuracy on the test set which could be considered as a good score however, the model only scores 90% accuracy on the training dataset, which indicate that the model should be improved by adding more features and improve feature engineering, try different models other than XGBoost, apply hyper parameter tuning to current model or add more data to the model if possible.
+Accuracy shows 78.5% accuracy on the test set which could be considered as a good score however, Low LTV cluster represents 76.5% of the total customers, so if the model was classifying all the customers in this cluster we would achieve 76.5% accuracy. Thus, whilst not perfect, the model still helps a bit in classifying the customers.
 
-
-
-
-
-
-
+Also, the model only scores 93% accuracy on the training dataset, which indicate that the model should be improved by adding more features and improve feature engineering, try different models other than XGBoost, apply hyper parameter tuning to current model or add more data to the model if possible. 
