@@ -273,6 +273,7 @@ We then calculate the number of days for each customer’s next purchase.
 ![ customer_table_with_npd]()
 
 ![ customer_description_npd]()
+
 The description above shows that median number of order is 4, therefore we are going to use as features the number of days between the last four orders:
 
 ![ last_four_orders]()
@@ -313,6 +314,7 @@ As we can see in the results above the lowest deviation is for the XGBoost and R
 ### Build the Model
 
 We run the model a first time setting only the random state:
+
 ![ first_model]()
 
 Our accuracy on the test set is 56% on the test set.
@@ -320,15 +322,18 @@ Our accuracy on the test set is 56% on the test set.
 #### Hyperparameter Tuning
 
 This process helps us choose the optimal values for the parameters of our model:
+
 ![ hyperparameters]()
 
 #### Final Model
 
 We run the model using the parameters generated above:
+
 ![ final_model]()
 
 We can see that our accuracy increased to 58%.
 
 #### Create an output
 We can now link the results back to a customer and create an output.
+
 ![ output]()
