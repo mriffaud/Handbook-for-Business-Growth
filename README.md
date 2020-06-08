@@ -254,33 +254,33 @@ Predicting when customers are going to purchase next gives a business the opport
 
 To build our model, we use nine months of behavioral data to predict customers’ first purchase date in the next three months. This will also take into account the customers that did not purchase. The goal is to find the number of days between the last purchase in the behavioral data and the first one in the next purchase data.
 
-![NextPurchaseDay_table]()
+![NextPurchaseDay_table](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/NextPurchaseDay_table.png)
 
 We have some NaN value sin our dataset therefore we are going to select only the rows where we can identify the customers.
 
 We also have to deal with the customers that only purchased one and therefore returned a NextPurchaseDay = NaN, in this instance we cannot fill these with zero as it would skew the prediction nor can we drop them as some customers may purchase within the next 3 months. A way of dealing with NaN is to take a high value as we are working with a year (365 days) worth of data; we choose 999. This will allow us to quickly identify them later.
 
-![NextPurchaseDay_without_NaN_table]()
+![NextPurchaseDay_without_NaN_table](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/NextPurchaseDay_without_NaN_table.png)
 
 ### Feature Engineering
 
 In this part we are going to add the result of part 2 of this handbook, namely the RFM segmentation, as a feature for our model.
 
-![customer_table]()
+![customer_table](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/customer_table.png)
 
 We then calculate the number of days for each customer’s next purchase.
 
-![ customer_table_with_npd]()
+![customer_table_with_npd](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/customer_table_with_npd.png)
 
-![ customer_description_npd]()
+![customer_description_npd](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/customer_description_npd.png)
 
 The description above shows that median number of order is 4, therefore we are going to use as features the number of days between the last four orders:
 
-![ last_four_orders]()
+![last_four_orders](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/last_four_orders.png)
 
 We can now identify the classes in our label data, NextPurchaseDay. For this we are going to look at the percentiles:
 
-![ describe_nextdaypurchase]()
+![describe_nextdaypurchase](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/describe_nextdaypurchase.png)
 
 Deciding the number of classes and their boundaries is a question for both statistics and business priorities and needs. Looking at the description above, we could split the data into three classes:
 * Class 2 - customers will purchase again within 6 weeks (between 0 to 42 days) 
@@ -290,7 +290,7 @@ Deciding the number of classes and their boundaries is a question for both stati
 This split enables us to have the time to communicate the information across to the marketing team that can then plan to take action.
 The last step is to plot the correlation between our features and label.
 
-![ correlation_table]()
+![correlation_table](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/correlation_table.png)
 
 Looking at the matrix above, the highest positive correlation is with the Frequency Cluster (0.52) while Segment Low-Value has the highest negative correlation (-0.51).
 
@@ -299,7 +299,7 @@ Looking at the matrix above, the highest positive correlation is with the Freque
 We first select our prediction target, NextDayPurchase, and store it in y. All the other features will be stored in X.
 We then split the data into train and test sets
 
-![ train_test_split]()
+![train_test_split](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/train_test_split.png)
 
 We are now going to use cross validation in order to find the most stable model for our data. It does it by providing the score of the model by selecting different test sets, the lower the deviation, the more stable the model is. For the purpose of this analysis we use two test sets and four models:
 * Gaussian Naive Bayes: NB
@@ -307,7 +307,7 @@ We are now going to use cross validation in order to find the most stable model 
 * Decision Tree Classifier: Tree
 * XGBoost Classifier: XGB
 
-![ results_cross_val]()
+![results_cross_val](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/results_cross_val.png)
 
 As we can see in the results above the lowest deviation is for the XGBoost and Random Forest classifiers. For the purpose of this analysis, we are going to select XGBoost classifier and use hyperparameter tuning to improve our accuracy score.
 
@@ -315,7 +315,7 @@ As we can see in the results above the lowest deviation is for the XGBoost and R
 
 We run the model a first time setting only the random state:
 
-![ first_model]()
+![first_model](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/first_model.png)
 
 Our accuracy on the test set is 56% on the test set.
 
@@ -323,17 +323,17 @@ Our accuracy on the test set is 56% on the test set.
 
 This process helps us choose the optimal values for the parameters of our model:
 
-![ hyperparameters]()
+![hyperparameters](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/hyperparameters.png)
 
 #### Final Model
 
 We run the model using the parameters generated above:
 
-![ final_model]()
+![final_model](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/final_model.png)
 
 We can see that our accuracy increased to 58%.
 
 #### Create an output
 We can now link the results back to a customer and create an output.
 
-![ output]()
+![ output](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/output.png)
