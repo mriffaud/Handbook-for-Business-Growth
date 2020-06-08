@@ -10,6 +10,7 @@ In the data area, there is an abundance of customer information and tools availa
 2. [ Step 1 - Key Performance Indicators ](#step1)
 3. [ Step 2 - Customer Segmentation ](#step2)
 4. [ Step 3 - Customer Lifetime Value ](#step3)
+5. [ Step 4 - Predicting Customer's Next Purchase ](#step4)
 
 
 ---
@@ -240,3 +241,94 @@ To build the predictive model we used XGBoost library to do the classification.
 Accuracy shows 78.5% accuracy on the test set which could be considered as a good score however, Low LTV cluster represents 76.5% of the total customers, so if the model was classifying all the customers in this cluster we would achieve 76.5% accuracy. Thus, whilst not perfect, the model still helps a bit in classifying the customers.
 
 Also, the model only scores 93% accuracy on the training dataset, which indicate that the model should be improved by adding more features and improve feature engineering, try different models other than XGBoost, apply hyper parameter tuning to current model or add more data to the model if possible. 
+
+---
+<a name="step4"></a>
+## Step 4 - Predicting Customer's Next Purchase
+
+Since we now know the most valuable customers by segments and their predicted lifetime value, we can look into predicting customer's next purchase date.
+
+Predicting when customers are going to purchase next gives a business the opportunity to implement an appropriate marketing strategy; knowing that a customer is going to take an order soon means that the business does not need to provide incentive to that customer, however if a purchase as not occured during the predicted period then the custoemrs should be targeted with marketing emails and offers to action an order.
+
+### Data Wrangling
+
+To build our model, we use nine months of behavioral data to predict customers’ first purchase date in the next three months. This will also take into account the customers that did not purchase. The goal is to find the number of days between the last purchase in the behavioral data and the first one in the next purchase data.
+
+![NextPurchaseDay_table]()
+
+We have some NaN value sin our dataset therefore we are going to select only the rows where we can identify the customers.
+
+We also have to deal with the customers that only purchased one and therefore returned a NextPurchaseDay = NaN, in this instance we cannot fill these with zero as it would skew the prediction nor can we drop them as some customers may purchase within the next 3 months. A way of dealing with NaN is to take a high value as we are working with a year (365 days) worth of data; we choose 999. This will allow us to quickly identify them later.
+
+![NextPurchaseDay_without_NaN_table]()
+
+### Feature Engineering
+
+In this part we are going to add the result of part 2 of this handbook, namely the RFM segmentation, as a feature for our model.
+
+![customer_table]()
+
+We then calculate the number of days for each customer’s next purchase.
+
+![ customer_table_with_npd]()
+
+![ customer_description_npd]()
+The description above shows that median number of order is 4, therefore we are going to use as features the number of days between the last four orders:
+
+![ last_four_orders]()
+
+We can now identify the classes in our label data, NextPurchaseDay. For this we are going to look at the percentiles:
+
+![ describe_nextdaypurchase]()
+
+Deciding the number of classes and their boundaries is a question for both statistics and business priorities and needs. Looking at the description above, we could split the data into three classes:
+* Class 2 - customers will purchase again within 6 weeks (between 0 to 42 days) 
+* Class 1 - customer will purchase again within 12 weeks (between 43 to 84 days)
+* Class 0 - customer will purchase in more than 12 weeks
+
+This split enables us to have the time to communicate the information across to the marketing team that can then plan to take action.
+The last step is to plot the correlation between our features and label.
+
+![ correlation_table]()
+
+Looking at the matrix above, the highest positive correlation is with the Frequency Cluster (0.52) while Segment Low-Value has the highest negative correlation (-0.51).
+
+### Selecting a Machine Learning Model
+
+We first select our prediction target, NextDayPurchase, and store it in y. All the other features will be stored in X.
+We then split the data into train and test sets
+
+![ train_test_split]()
+
+We are now going to use cross validation in order to find the most stable model for our data. It does it by providing the score of the model by selecting different test sets, the lower the deviation, the more stable the model is. For the purpose of this analysis we use two test sets and four models:
+* Gaussian Naive Bayes: NB
+* Random Forest Classifier: RF
+* Decision Tree Classifier: Tree
+* XGBoost Classifier: XGB
+
+![ results_cross_val]()
+
+As we can see in the results above the lowest deviation is for the XGBoost and Random Forest classifiers. For the purpose of this analysis, we are going to select XGBoost classifier and use hyperparameter tuning to improve our accuracy score.
+
+### Build the Model
+
+We run the model a first time setting only the random state:
+![ first_model]()
+
+Our accuracy on the test set is 56% on the test set.
+
+#### Hyperparameter Tuning
+
+This process helps us choose the optimal values for the parameters of our model:
+![ hyperparameters]()
+
+#### Final Model
+
+We run the model using the parameters generated above:
+![ final_model]()
+
+We can see that our accuracy increased to 58%.
+
+#### Create an output
+We can now link the results back to a customer and create an output.
+![ output]()
