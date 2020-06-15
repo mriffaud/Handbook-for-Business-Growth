@@ -362,7 +362,7 @@ Ideally, purchase count should be a Poisson distribution. There will be customer
 
 ![customer_distribution]()
 
-The chart above shows promessing results as the density of the test group’s purchase is better starting from 1. In order to assess if this is a result of the coupon code we are going to check if the upward trend in the test group is statistically significant and not a result of other factor.
+The chart above shows promessing results as the density of the test group’s purchase is better starting from 1. In order to assess if this is a result of the coupon code we are going to check if the upward trend in the test group is statistically significant and not a result of other factors.
 
 First we need to formulate our null hypothesis, in this case: 
 * *h0: the test and control groups have the same retention rate.*
