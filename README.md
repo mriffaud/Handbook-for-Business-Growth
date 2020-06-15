@@ -11,6 +11,7 @@ In the data area, there is an abundance of customer information and tools availa
 3. [ Step 2 - Customer Segmentation ](#step2)
 4. [ Step 3 - Customer Lifetime Value ](#step3)
 5. [ Step 4 - Predicting Customer's Next Purchase ](#step4)
+6. [ Step 5 - A/B Testing ](#step5)
 
 
 ---
@@ -337,3 +338,46 @@ We can see that our accuracy increased to 58%.
 We can now link the results back to a customer and create an output.
 
 ![ output](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/Predicting%20Customer's%20Next%20Purchase/output.png)
+
+---
+<a name="step5"></a>
+## Step 5 - A/B Testing
+
+In the last step we predicted customer's next purchase. In the event a customer does not purchase at that was predicted the business should has a strategy to ensure that this customer does not churn and recapture its interest and engagement with the company's products. A way of doing so it to incentivise customer to purchase by offering a coupon code. However, in order to assess if this strategy is working, we need to conduct an A/B test.
+
+But first, we need to have clear objectives in mind. What we want to know is if customers who received a coupon code have a greater retention rate than the control group:
+* Test Group → Offer → Higher Retention
+* Control Group → No offer → Lower Retention
+
+We could have also use the revenue as success metric but for the purpose of this analysis we are using retention as we are trying to prevent churn.
+
+For the purpose of the analysis we are using the rfm data generated in Step 2. We select the customerIds and segment columns from dataset. 
+
+![rfm_data]()
+
+We then split the data into two text and control groups:
+![control_test_groups]()
+
+Ideally, purchase count should be a Poisson distribution. There will be customers with no purchase and we will have less customers with high purchase counts.
+
+![customer_distribution]()
+
+The chart above shows promessing results as the density of the test group’s purchase is better starting from 1. In order to assess if this is a result of the coupon code we are going to check if the upward trend in the test group is statistically significant and not a result of other factor.
+
+First we need to formulate our null hypothesis, in this case: 
+* *h0: the test and control groups have the same retention rate.*
+
+We are going to use a t-test to perform hypothesis testing.
+
+![t-test]()
+
+The results produced above show that the p-value is < 0.05, therefore we can reject the null hypothsesis.
+
+
+
+
+
+
+
+
+
