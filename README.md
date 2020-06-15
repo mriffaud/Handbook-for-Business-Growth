@@ -353,14 +353,14 @@ We could have also use the revenue as success metric but for the purpose of this
 
 For the purpose of the analysis we are using the rfm data generated in Step 2. We select the customerIds and segment columns from dataset. 
 
-![rfm_data]()
+![rfm_data](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/rfm_data.png)
 
 We then split the data into two text and control groups:
-![control_test_groups]()
+![control_test_groups](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/control_test_groups.png)
 
 Ideally, purchase count should be a Poisson distribution. There will be customers with no purchase and we will have less customers with high purchase counts.
 
-![customer_distribution]()
+![customer_distribution](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/customer_distribution.png)
 
 The chart above shows promessing results as the density of the test group’s purchase is better starting from 1. In order to assess if this is a result of the coupon code we are going to check if the upward trend in the test group is statistically significant and not a result of other factors.
 
@@ -369,15 +369,6 @@ First we need to formulate our null hypothesis, in this case:
 
 We are going to use a t-test to perform hypothesis testing.
 
-![t-test]()
+![t-test](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/t-test.png)
 
 The results produced above show that the p-value is < 0.05, therefore we can reject the null hypothsesis.
-
-
-
-
-
-
-
-
-
