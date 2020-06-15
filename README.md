@@ -356,6 +356,7 @@ For the purpose of the analysis we are using the rfm data generated in Step 2. W
 ![rfm_data](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/rfm_data.png)
 
 We then split the data into two text and control groups:
+
 ![control_test_groups](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/control_test_groups.png)
 
 Ideally, purchase count should be a Poisson distribution. There will be customers with no purchase and we will have less customers with high purchase counts.
