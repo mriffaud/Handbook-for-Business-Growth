@@ -355,7 +355,7 @@ For the purpose of the analysis we are using the rfm data generated in Step 2. W
 
 ![rfm_data](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/rfm_data.png)
 
-We then split the data into two text and control groups:
+We then split the data into two test and control groups:
 
 ![control_test_groups](https://github.com/mriffaud/Handbook-for-Business-Growth/blob/master/images/A:B%20Testing/control_test_groups.png)
 
