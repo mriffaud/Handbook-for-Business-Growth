@@ -1,6 +1,7 @@
 # Handbook of the Business Growth
 
 ![banner](https://www.rapidhits.net/wp-content/uploads/2018/06/data-driven-advertising-850x350.jpg)
+![banner](https://images.pexels.com/photos/185576/pexels-photo-185576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 
 In the data era, there is an abundance of customer information and tools available to businesses in order to make informed business decision. In this handbook I followed a method to use customer data to grow a business using a combination of programming, data analysis, and machine learning.
 
